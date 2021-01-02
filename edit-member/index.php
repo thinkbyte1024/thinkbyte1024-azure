@@ -15,7 +15,7 @@
         $name = $data['name'];
         $role = $data['role'];
         $joinDate = $data['joined'];
-        $salary = $data['salary'];
+        $salary = (float)$data['salary'];
     } else {
         header("location: ..");
     }
@@ -37,13 +37,16 @@
 
     <div class="container-fluid">
         <form action="process_request.php" method="POST">
+            <!-- This input will be hidden -->
+            <input type="hidden" name="id" value="<?php echo $id; ?>"> 
+
             <div class="form-group">
                 <label for="name">Member Name</label>
-                <input type="text" name="name" id="name" class="form-control" placeholder="Example: John Doe" value=<?php echo $data['name']; ?>>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Example: John Doe" value="<?php echo $data['name']; ?>">
             </div>
 
             <div class="form-group">
-                <label for="role"></label>
+                <label for="role">Role</label>
                 <select name="role" id="role" class="form-control">
                     <option value="Administrator" <?php if ($data['role'] == "Administrator") { echo "selected"; } ?> >Administrator</option>
                     <option value="Database Operator" <?php if ($data['role'] == "Database Operator") { echo "selected"; } ?> >Database Operator</option>
@@ -53,14 +56,17 @@
                 </select>
             </div>
 
-            <input class="form-control" type="date" value=<?php echo $joinDate; ?> readonly>
+            <div class="form-group">
+                <label for="joinDate">Joined on</label>
+                <input class="form-control" name="joinDate" id="joinDate" type="date" value="<?php echo $joinDate; ?>" readonly>
+            </div>
 
             <div class="form-group">
                 <label for="salary">Salary</label>
-                <input type="text" name="salary" id="salary" value=<?php echo $data['salary']; ?>>
+                <input type="text" name="salary" id="salary" value="<?php echo $data['salary']; ?>">
             </div>
 
-            <button type="submit" class="btn btn-primary">Apply data</button>
+            <button type="submit" name="apply" class="btn btn-primary">Apply data</button>
         </form>
     </div>
 </body>

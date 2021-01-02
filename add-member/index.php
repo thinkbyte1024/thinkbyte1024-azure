@@ -30,14 +30,18 @@
                 </select>
             </div>
 
-            <input class="form-control" type="date">
+            <div class="form-group">
+                <label for="joinDate">Joined on</label>
+                <input class="form-control" name="joinDate" id="joinDate" type="date" value="<?php echo date("d-m-Y"); ?>" readonly>
+                <small id="dateHint" class="form-text text-muted">Your date will automatically filled according to your current date</small>
+            </div>
 
             <div class="form-group">
                 <label for="salary">Salary</label>
                 <input type="text" name="salary" id="salary">
             </div>
 
-            <button type="submit" class="btn btn-primary">Add member</button>
+            <button type="submit" name="add" class="btn btn-primary">Add member</button>
         </form>
     </div>
 </body>

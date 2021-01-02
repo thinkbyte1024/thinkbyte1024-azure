@@ -10,7 +10,7 @@
         if (!$result) {
             die("Query error: " . mysqli_error($conn));
         } else {
-            header("location: ../../ ");
+            header("location: ../../members/ ");
         }
     }
 ?>
