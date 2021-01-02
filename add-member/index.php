@@ -9,7 +9,7 @@
 
     <script>
         function openUrl() {
-            window.open("https://thinkbyte1024.azurewebsites.net/members/", "_self")
+            window.open("../members/", "_self")
         }
     </script>
 </head>

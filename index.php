@@ -20,7 +20,7 @@
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">About us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://thinkbyte1024.azurewebsites.net/members/">Members</a>
+                <a class="nav-link" href="members/">Members</a>
             </li>
         </div>
     </nav>

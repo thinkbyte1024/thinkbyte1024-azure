@@ -8,7 +8,7 @@
 
     <script>
         function openUrl() {
-            window.open("https://thinkbyte1024.azurewebsites.net/add-member/", "_self")
+            window.open("../add-member/", "_self")
         }
     </script>
 </head>
@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="https://thinkbyte1024.azurewebsites.net/">About us<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="..">About us<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Members</a>
@@ -53,7 +53,7 @@
             
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
-                            echo "<tr>" ."<td>" . $row['name'] . "</td><td>" . $row['role'] . "</td><td>" . $row['joined'] . "</td><td>" . "$" . $row['salary'] . '</td><td> <a class="btn btn-primary" href="https://thinkbyte1024.azurewebsites.net/edit-member/?id=' . $row['member_id'] .  '" role="button">Edit</a> <a class="btn btn-primary" href="https://thinkbyte1024.azurewebsites.net/include/php/request_delete.php?id=' . $row['member_id'] . '" role="button" onclick="return confirm(\'Do you really want to erase this data?\')">Delete</a>' . "</td></tr>";
+                            echo "<tr>" ."<td>" . $row['name'] . "</td><td>" . $row['role'] . "</td><td>" . $row['joined'] . "</td><td>" . "$" . $row['salary'] . '</td><td> <a class="btn btn-primary" href="../edit-member/?id=' . $row['member_id'] .  '" role="button">Edit</a> <a class="btn btn-primary" href="../include/php/request_delete.php?id=' . $row['member_id'] . '" role="button" onclick="return confirm(\'Do you really want to erase this data?\')">Delete</a>' . "</td></tr>";
                         }
                     } else {
                         echo "No results";
