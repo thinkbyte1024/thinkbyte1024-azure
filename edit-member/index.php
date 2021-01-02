@@ -14,7 +14,7 @@
         $data = mysqli_fetch_assoc($result);
         $name = $data['name'];
         $role = $data['role'];
-        $joinDate = $data['joined'];
+        $joinDate = date_format($data['joined'], "d/m/Y");
         $salary = (float)$data['salary'];
     } else {
         header("location: ..");
@@ -40,9 +40,9 @@
     </nav>
     <!-- End Navbar -->
 
-    <div class="container container-fluid">
+    <div class="container-fluid">
         <h1>Edit member</h1>
-        
+
         <form action="process_request.php" method="POST">
             <!-- This input will be hidden -->
             <input type="hidden" name="id" value="<?php echo $id; ?>"> 

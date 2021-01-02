@@ -20,9 +20,9 @@
     </nav>
     <!-- End Navbar -->
 
-    <div class="container container-fluid">
+    <div class="container-fluid">
         <h1>Add a member</h1>
-        
+
         <form action="process_request.php" method="POST">
             <div class="form-group">
                 <label for="name">Member Name</label>
