@@ -4,7 +4,7 @@
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
 
-        $query = "DELETE FROM members WHERE id='$id'";
+        $query = "DELETE FROM members WHERE member_id='$id'";
         $result = $conn->query($query);
 
         if (!$result) {

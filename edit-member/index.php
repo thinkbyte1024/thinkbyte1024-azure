@@ -14,7 +14,7 @@
         $data = mysqli_fetch_assoc($result);
         $name = $data['name'];
         $role = $data['role'];
-        $joinDate = date_format($data['joined'], "d/m/Y");
+        $joinDate = $data['joined'];
         $salary = (float)$data['salary'];
     } else {
         header("location: ..");
@@ -65,7 +65,7 @@
 
             <div class="form-group">
                 <label for="joinDate">Joined on</label>
-                <input class="form-control" name="joinDate" id="joinDate" type="text" value="<?php echo $joinDate; ?>" readonly>
+                <input class="form-control" name="joinDate" id="joinDate" type="text" value="<?php echo date_format($joinDate, "d-m-Y"); ?>" readonly>
             </div>
 
             <div class="form-group">

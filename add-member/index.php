@@ -42,13 +42,13 @@
 
             <div class="form-group">
                 <label for="joinDate">Joined on</label>
-                <input class="form-control" name="joinDate" id="joinDate" type="text" value="<?php echo date("d/m/Y"); ?>" readonly>
+                <input class="form-control" name="joinDate" id="joinDate" type="text" value="<?php echo date("d-m-Y"); ?>" readonly>
                 <small id="dateHint" class="form-text text-muted">Your date will automatically filled according to your current date</small>
             </div>
 
             <div class="form-group">
                 <label for="salary">Salary</label>
-                <input type="text" name="salary" id="salary">
+                <input type="text" name="salary" id="salary" class="form-control">
             </div>
 
             <button type="submit" name="add" class="btn btn-primary btn-lg btn-block">Add member</button>
