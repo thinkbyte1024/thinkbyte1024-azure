@@ -53,7 +53,7 @@
             
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
-                            echo "<tr>" ."<td>" . $row['name'] . "</td><td>" . $row['role'] . "</td><td>" . date_format($row['joined'], "d-m-Y") . "</td><td>" . "$" . $row['salary'] . '</td><td> <a class="btn btn-primary" href="https://thinkbyte1024.azurewebsites.net/edit-member/?id=' . $row['member_id'] .  '" role="button">Edit</a> <a class="btn btn-primary" href="https://thinkbyte1024.azurewebsites.net/include/php/request_delete.php?id=' . $row['member_id'] . '" role="button" onclick="return confirm(\'Do you really want to erase this data?\')">Delete</a>' . "</td></tr>";
+                            echo "<tr>" ."<td>" . $row['name'] . "</td><td>" . $row['role'] . "</td><td>" . $row['joined'] . "</td><td>" . "$" . $row['salary'] . '</td><td> <a class="btn btn-primary" href="https://thinkbyte1024.azurewebsites.net/edit-member/?id=' . $row['member_id'] .  '" role="button">Edit</a> <a class="btn btn-primary" href="https://thinkbyte1024.azurewebsites.net/include/php/request_delete.php?id=' . $row['member_id'] . '" role="button" onclick="return confirm(\'Do you really want to erase this data?\')">Delete</a>' . "</td></tr>";
                         }
                     } else {
                         echo "No results";
