@@ -40,9 +40,9 @@
     </nav>
     <!-- End Navbar -->
 
-    <h1>Edit member</h1>
-
-    <div class="container-fluid">
+    <div class="container container-fluid">
+        <h1>Edit member</h1>
+        
         <form action="process_request.php" method="POST">
             <!-- This input will be hidden -->
             <input type="hidden" name="id" value="<?php echo $id; ?>"> 

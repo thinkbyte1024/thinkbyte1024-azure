@@ -10,6 +10,7 @@
         if (!$result) {
             die("Query error: " . mysqli_error($conn));
         } else {
+            $conn->close();
             header("location: ../../members/ ");
         }
     }

@@ -32,35 +32,38 @@
     </nav>
     <!-- End Navbar -->
 
-    <h1>Thinkbyte1024 Employee Database</h1>
-    <?php 
-        include '../include/php/connection.php';
-    ?>
-    <table class="table table-striped table-dark table-bordered">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Role</th>
-                <th>Joined</th>
-                <th>Salary</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-                $query = "SELECT * FROM members";
-                $result = $conn->query($query);
-        
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<tr>" ."<td>" . $row['name'] . "</td><td>" . $row['role'] . "</td><td>" .$row['joined'] . "</td><td>" . "$" . $row['salary'] . '</td><td> <a class="btn btn-primary" href="https://thinkbyte1024.azurewebsites.net/edit-member/?id=' . $data['member_id'] .  ' role="button">Edit</a> <a class="btn btn-primary" href="https://thinkbyte1024.azurewebsites.net/include/php/request_delete.php?id=' . $data['member_id'] . ' role="button" onclick="return confirm(\'Do you really want to erase this data?\')">Delete</a>' . "</td></tr>";
+    <div class="container container-fluid">
+        <h1>Thinkbyte1024 Employee Database</h1>
+        <?php 
+            include '../include/php/connection.php';
+        ?>
+        <table class="table table-striped table-dark table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Joined</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    $query = "SELECT * FROM members";
+                    $result = $conn->query($query);
+            
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<tr>" ."<td>" . $row['name'] . "</td><td>" . $row['role'] . "</td><td>" .$row['joined'] . "</td><td>" . "$" . $row['salary'] . '</td><td> <a class="btn btn-primary" href="https://thinkbyte1024.azurewebsites.net/edit-member/?id=' . $row['member_id'] .  ' role="button">Edit</a> <a class="btn btn-primary" href="https://thinkbyte1024.azurewebsites.net/include/php/request_delete.php?id=' . $row['member_id'] . ' role="button" onclick="return confirm(\'Do you really want to erase this data?\')">Delete</a>' . "</td></tr>";
+                        }
+                    } else {
+                        echo "No results";
                     }
-                } else {
-                    echo "No results";
-                }
-                $conn->close();
-            ?>
-        </tbody>
-    </table>
-    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="openUrl()">Add a member</button>
+                    
+                    $conn->close();
+                ?>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="openUrl()">Add a member</button>
+    </div>
 </body>
 </html>
