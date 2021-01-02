@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thinkbyte1024 Employee</title>
-    <link rel="stylesheet" href="include/bootstrap-4.5.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../include/bootstrap-4.5.3-dist/css/bootstrap.css">
 </head>
 <body>
     <h1>Thinkbyte1024 Employee Database</h1>
