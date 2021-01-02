@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thinkbyte1024 Employee</title>
     <link rel="stylesheet" href="../include/bootstrap-4.5.3-dist/css/bootstrap.css">
+
+    <script>
+        function openUrl() {
+            window.open("https://thinkbyte1024.azurewebsites.net/add-member/")
+        }
+    </script>
 </head>
 <body>
     <!-- Navbar -->
@@ -46,7 +52,7 @@
         
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        echo "<tr>" ."<td>" . $row['name'] . "</td><td>" . $row['role'] . "</td><td>" .$row['joined'] . "</td><td>" . "$" . $row['salary'] . '</td><td> <a class="btn btn-primary" href="https://thinkbyte1024.azurewebsites.net/edit-member/?id="' . $data['member_id'] .  '" role="button">Edit</a> <a class="btn btn-primary" href="https://thinkbyte1024.azurewebsites.net/include/php/request_delete.php?id="' . $data['member_id'] . '" role="button" onclick="return confirm(\'Do you really want to erase this data?\')">Delete</a>' . "</td></tr>";
+                        echo "<tr>" ."<td>" . $row['name'] . "</td><td>" . $row['role'] . "</td><td>" .$row['joined'] . "</td><td>" . "$" . $row['salary'] . '</td><td> <a class="btn btn-primary" href="https://thinkbyte1024.azurewebsites.net/edit-member/?id=' . $data['member_id'] .  ' role="button">Edit</a> <a class="btn btn-primary" href="https://thinkbyte1024.azurewebsites.net/include/php/request_delete.php?id=' . $data['member_id'] . ' role="button" onclick="return confirm(\'Do you really want to erase this data?\')">Delete</a>' . "</td></tr>";
                     }
                 } else {
                     echo "No results";
@@ -55,5 +61,6 @@
             ?>
         </tbody>
     </table>
+    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="openUrl()">Add a member</button>
 </body>
 </html>

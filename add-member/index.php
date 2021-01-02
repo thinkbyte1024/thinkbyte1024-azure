@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Member</title>
+
+    <script>
+        function openUrl() {
+            window.open("https://thinkbyte1024.azurewebsites.net/members/")
+        }
+    </script>
 </head>
 <body>
     <!-- Navbar -->
@@ -12,6 +18,8 @@
     </nav>
     <!-- End Navbar -->
     
+    <h1>Add a member</h1>
+
     <div class="container-fluid">
         <form action="process_request.php" method="POST">
             <div class="form-group">
@@ -41,7 +49,8 @@
                 <input type="text" name="salary" id="salary">
             </div>
 
-            <button type="submit" name="add" class="btn btn-primary">Add member</button>
+            <button type="submit" name="add" class="btn btn-primary btn-lg btn-block">Add member</button>
+            <button type="reset" class="btn btn-primary btn-lg btn-block" onclick="openUrl()">Go back</button>
         </form>
     </div>
 </body>
