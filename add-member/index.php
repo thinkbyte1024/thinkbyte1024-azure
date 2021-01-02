@@ -42,7 +42,7 @@
 
             <div class="form-group">
                 <label for="joinDate">Joined on</label>
-                <input class="form-control" name="joinDate" id="joinDate" type="text" value="<?php echo date(); ?>" readonly>
+                <input class="form-control" name="joinDate" id="joinDate" type="text" value="<?php echo date("Y-m-d"); ?>" readonly>
                 <small id="dateHint" class="form-text text-muted">Your date will automatically filled according to your current date</small>
             </div>
 
