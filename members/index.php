@@ -8,7 +8,7 @@
 
     <script>
         function openUrl() {
-            window.open("https://thinkbyte1024.azurewebsites.net/add-member/")
+            window.open("https://thinkbyte1024.azurewebsites.net/add-member/", "_self")
         }
     </script>
 </head>

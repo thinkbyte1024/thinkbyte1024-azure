@@ -9,7 +9,7 @@
 
     <script>
         function openUrl() {
-            window.open("https://thinkbyte1024.azurewebsites.net/members/")
+            window.open("https://thinkbyte1024.azurewebsites.net/members/", "_self")
         }
     </script>
 </head>
@@ -42,7 +42,7 @@
 
             <div class="form-group">
                 <label for="joinDate">Joined on</label>
-                <input class="form-control" name="joinDate" id="joinDate" type="date" value="<?php echo date("d-m-Y"); ?>" readonly>
+                <input class="form-control" name="joinDate" id="joinDate" type="text" value="<?php echo date("d/m/Y"); ?>" readonly>
                 <small id="dateHint" class="form-text text-muted">Your date will automatically filled according to your current date</small>
             </div>
 

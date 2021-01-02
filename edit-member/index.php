@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="../include/bootstrap-4.5.3-dist/css/bootstrap.css">
     <script>
         function openUrl() {
-            window.open("https://thinkbyte1024.azurewebsites.net/members/")
+            window.open("https://thinkbyte1024.azurewebsites.net/members/", "_self")
         }
     </script>
 </head>
@@ -65,7 +65,7 @@
 
             <div class="form-group">
                 <label for="joinDate">Joined on</label>
-                <input class="form-control" name="joinDate" id="joinDate" type="date" value="<?php echo $joinDate; ?>" readonly>
+                <input class="form-control" name="joinDate" id="joinDate" type="text" value="<?php echo $joinDate; ?>" readonly>
             </div>
 
             <div class="form-group">
