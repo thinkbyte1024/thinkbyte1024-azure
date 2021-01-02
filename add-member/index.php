@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Member</title>
 
+    <link rel="stylesheet" href="../include/bootstrap-4.5.3-dist/css/bootstrap.css">
+
     <script>
         function openUrl() {
             window.open("https://thinkbyte1024.azurewebsites.net/members/")
