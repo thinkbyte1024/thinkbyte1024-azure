@@ -9,17 +9,28 @@
     <?php 
         include 'lib/connection.php';
 
-        $query = "SELECT * FROM members";
-        $result = $conn->query($query);
-
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo "Name: " . $row['name'] . "<br>Role: " . $row['role'] . "<br>Joined: " .$row['joined'] . "<br>Salary: " . $row['salary'] . "<br><br>";
-            }
-        } else {
-            echo "No results";
-        }
-        $conn->close();
+        
     ?>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Role</th>
+            <th>Joined</th>
+            <th>Salary</th>
+        </tr>
+        <?php
+            $query = "SELECT * FROM members";
+            $result = $conn->query($query);
+    
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>" ."<td>" . $row['name'] . "</td><td>" . $row['role'] . "</td><td>" .$row['joined'] . "</td><td>" . "$" . $row['salary'] . "</td></tr>";
+                }
+            } else {
+                echo "No results";
+            }
+            $conn->close();
+        ?>
+    </table>
 </body>
 </html>
